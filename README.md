@@ -9,5 +9,5 @@
 - Add Employees
 - Delete Employees
 ### UseCases
-- Happy Path: Existing User --> Uses Fob --> Enters Gym.
-- Non-Happy Path: Non-Existing User --> Uses Fob --> Cannot Enter Gym.
+- Happy Path: Existing User --> Validation --> Enters Gym.
+- Non-Happy Path: Non-Existing User --> Validation --> Cannot Enter Gym.
