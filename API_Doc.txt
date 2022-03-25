@@ -1,0 +1,116 @@
+## GET
+1- Get all Users : /getUsers
+GET
+Response:
+{
+status: "OK",
+payload: [
+        {
+          id: "123xyz",
+          firstName: "Akshay",
+          lastName: "Desai",
+          phoneNumber: "54123409879"        
+        },
+        {
+          id: "456oiu",
+          firstName: "James",
+          lastName: "Jackson",
+          phoneNumber: "4556667788"        
+        }
+      ]
+}
+
+2- Get particular User : /getUsers/?id="123xyz"
+
+Response:
+{
+status: "OK",
+payload: [
+        {
+          id: "123xyz",
+          firstName: "Akshay",
+          lastName: "Desai",
+          phoneNumber: "54123409879"        
+        }
+      ]
+}
+
+## UPDATE
+1- Update User Phone Number : /updateUser
+PUT
+Request:
+  body:
+  [
+    { 
+      id: "456oiu",
+      phoneNumber: "9900887654"
+    }
+  ]
+  
+Response:
+{
+  status: "OK",
+  payload: [
+      {
+          id: "456oiu",
+          firstName: "James",
+          lastName: "Jackson",
+          phoneNumber: "9900887654"        
+      }
+  ]
+}
+
+## ADD USER
+1- Add a new User : /addUser
+POST
+Request:
+body:
+{
+    [
+     {
+          id: "999yyz",
+          firstName: "Julia",
+          lastName: "Roberts",
+          phoneNumber: "0987651342"
+     }
+    ]
+}
+
+Response:
+{
+  status: "OK",
+  payload: [
+    {
+          id: "999yyz",
+          firstName: "Julia",
+          lastName: "Roberts",
+          phoneNumber: "0987651342"
+     }
+  ]
+}
+
+## DELETE USER
+1- Want to Delete User: /removeUser/?id="456oiu"
+DELETE
+
+Response:
+{
+  status:"OK",
+  message:"User Deleted Successfully"
+  payload:[
+     {
+          id: "999yyz",
+          firstName: "Julia",
+          lastName: "Roberts",
+          phoneNumber: "0987651342"
+     },
+     {
+          id: "123xyz",
+          firstName: "Akshay",
+          lastName: "Desai",
+          phoneNumber: "54123409879"        
+     }
+  ]
+
+}
+
